@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email and Password Login</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container" id="createAccountContainer">
+        <h2>Create Account</h2>
+        
+        <form id="createAccountForm">
+            <label for="createEmail">Email:</label>
+            <input type="email" id="createEmail" placeholder="Enter your email" required>
+            
+            <label for="createPassword">Password:</label>
+            <input type="password" id="createPassword" placeholder="Enter your password" required>
+            
+            <button type="submit">Create Account</button>
+        </form>
+        
+        <div id="createMessage"></div>
+        <p>Already have an account? <a href="javascript:void(0);" onclick="switchToLogin()">Log In</a></p>
+    </div>
+
+    <div class="container" id="loginContainer" style="display: none;">
+        <h2>Log In</h2>
+        
+        <form id="loginForm">
+            <label for="loginEmail">Email:</label>
+            <input type="email" id="loginEmail" placeholder="Enter your email" required>
+            
+            <label for="loginPassword">Password:</label>
+            <input type="password" id="loginPassword" placeholder="Enter your password" required>
+    
+            <button type="submit">Log In</button>
+        </form>
+        
+        <div id="loginMessage"></div>
+        <p>Don't have an account? <a href="javascript:void(0);" onclick="switchToCreateAccount()">Create Account</a></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
